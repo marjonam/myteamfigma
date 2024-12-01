@@ -53,7 +53,7 @@
 
   --h1-large-size: 10rem;
   --h1-large-line: 1;
-  --h1-small-size-line: 6.4rem;
+  --h1-small-size: 6.4rem;
   --h1-small-line: 0.88;
 
   --h2-size: 4.8rem;
@@ -231,14 +231,14 @@ body {
   background-repeat: no-repeat;
   background-position: left -100px top 50px, right 260px bottom -100px;
 }
-.hero-container {
+.hero__container {
   display: flex;
 }
 
 .hero__title-wrapper {
   width: 635px;
 }
-.hero-title {
+.hero__title {
   font-size: var(--h1-large-size);
   line-height: var(--h1-large-line);
 }
@@ -262,7 +262,40 @@ body {
   background-color: var(--primary-sacramento-state-green-color);
 }
 
-@media screen and(max-width:996px) {
+@media screen and (max-width: 996px) {
+  .hero {
+    padding-top: 4.8rem;
+    padding-bottom: 25.6rem;
+    background-image: url("../images/svg/bgimg-hero.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom -100px;
+  }
+
+  .hero__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__title-wrapper {
+    margin-bottom: 2.4rem;
+    width: 100%;
+    max-width: 635px;
+  }
+
+  .hero__title {
+    font-size: var(--h1-small-size);
+    line-height: var(--h1-small-line);
+  }
+
+  .hero__info {
+    width: 100%;
+    max-width: 477px;
+  }
+
+  .hero__divider {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -279,7 +312,6 @@ body {
   }
 }
 
-/*media*/
 @media screen and (max-width: 680px) {
   .header {
     padding: 8rem 0;
@@ -325,5 +357,31 @@ body {
 
   .sitenav__item:last-child {
     margin-bottom: 3.6rem;
+  }
+}
+
+@media screen and (max-width: 397px) {
+  :root {
+    --h2-small-size: 4rem;
+    --h2-small-line: 1rem;
+  }
+
+  .container {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+
+  .hero {
+    padding-top: 3.2rem;
+    padding-bottom: 19.7rem;
+  }
+
+  .hero__title-wrapper {
+    margin-bottom: 1.8rem;
+  }
+
+  .hero__description {
+    font-size: var(--main-font-size-2);
+    line-height: var(--main-line-height-2);
   }
 }
